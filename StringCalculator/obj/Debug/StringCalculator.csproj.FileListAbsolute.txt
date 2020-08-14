@@ -1,0 +1,9 @@
+/Users/tomspencer/Desktop/StringCalculator/StringCalculator/StringCalculator/bin/Debug/StringCalculator.dll
+/Users/tomspencer/Desktop/StringCalculator/StringCalculator/StringCalculator/bin/Debug/StringCalculator.pdb
+/Users/tomspencer/Desktop/StringCalculator/StringCalculator/StringCalculator/bin/Debug/nunit.framework.dll
+/Users/tomspencer/Desktop/StringCalculator/StringCalculator/StringCalculator/bin/Debug/nunit.framework.xml
+/Users/tomspencer/Desktop/StringCalculator/StringCalculator/StringCalculator/obj/Debug/StringCalculator.csprojAssemblyReference.cache
+/Users/tomspencer/Desktop/StringCalculator/StringCalculator/StringCalculator/obj/Debug/StringCalculator.csproj.CoreCompileInputs.cache
+/Users/tomspencer/Desktop/StringCalculator/StringCalculator/StringCalculator/obj/Debug/StringCalculator.csproj.CopyComplete
+/Users/tomspencer/Desktop/StringCalculator/StringCalculator/StringCalculator/obj/Debug/StringCalculator.dll
+/Users/tomspencer/Desktop/StringCalculator/StringCalculator/StringCalculator/obj/Debug/StringCalculator.pdb
