@@ -11,5 +11,11 @@ namespace StringCalculator.Tests
         {
             Assert.That(_stringCalculator, Is.TypeOf<StringCalculator>());
         }
+
+        public void AddMethodreturnsZeroForEmptyString()
+        {
+            var result = _stringCalculator.Add("");
+            Assert.That(result, Is.EqualTo(0));
+        }
     }
 }
