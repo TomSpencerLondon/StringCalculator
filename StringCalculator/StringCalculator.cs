@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using NUnit.Framework.Constraints;
@@ -16,10 +17,16 @@ namespace StringCalculator
 
             if (numbers.StartsWith("//"))
             {
+                string toAdd = ";";
+                regex.Add(toAdd);
+                result.Append(numbers.Substring(5, 3));
             }
-            
-            result.Append(numbers);
-            
+
+            if (!numbers.StartsWith("//"))
+            {
+                result.Append(numbers);
+            }
+
             return result.ToString()
                 .Split(regex.ToArray(), StringSplitOptions.None)
                 .Select(x => x.Trim())
