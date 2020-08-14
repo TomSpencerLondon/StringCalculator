@@ -20,10 +20,7 @@ namespace StringCalculator
                 string toAdd = ";";
                 regex.Add(toAdd);
                 result.Append(numbers.Substring(5, 3));
-            }
-
-            if (!numbers.StartsWith("//"))
-            {
+            }else{
                 result.Append(numbers);
             }
 

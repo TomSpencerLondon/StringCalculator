@@ -8,4 +8,9 @@
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::63217E35-0D73-4B2D-9193-969A6A565166::.NETFramework,Version=v4.8::StringCalculator.Tests.StringCalculatorShould&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bf8bf107_002D3a69_002D4b23_002D9693_002D34f3c4565324/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="False" ContinuousTestingMode="0" FrameworkVersion="{x:Null}" IsLocked="False" Name="AddWithCustomDelimiter" PlatformMonoPreference="{x:Null}" PlatformType="{x:Null}" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::63217E35-0D73-4B2D-9193-969A6A565166::.NETFramework,Version=v4.8::StringCalculator.Tests.StringCalculatorShould&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
