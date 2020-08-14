@@ -11,8 +11,7 @@ namespace StringCalculator
     public class StringCalculator
     {
         private List<string> _regex = new List<string>(new string[]{",", "\\n"});
-
-
+        
         public int Add(string input)
         {
             
@@ -39,7 +38,9 @@ namespace StringCalculator
         {
             int startNumbers = input.IndexOf(@"\n", StringComparison.Ordinal) + 2;
             var startCustomDelimiter = input.IndexOf("//", StringComparison.Ordinal) + 2;
-            int length = input.Length - (startNumbers + startCustomDelimiter);
+            int numberLength = input.Length - startNumbers;
+            
+            int length = input.Length - (numberLength + startCustomDelimiter + 2);
             
             AddToRegex(input, startCustomDelimiter, length);
             
@@ -55,12 +56,17 @@ namespace StringCalculator
         private void AddToRegex(string input, int startCustomDelimiter, int length)
         {
             string toAdd = input.Substring(startCustomDelimiter, length);
-            if (toAdd.StartsWith("["))
-            {
-                toAdd = toAdd.Split('[', ']')[1];
+            if (toAdd.StartsWith("[")) {
+                List<string> list = toAdd.ToCharArray().Select(c => c.ToString()).ToList()
+                    .Where(x => !x.Equals("[") && !x.Equals("]")).ToList();
+                    foreach (var s in list)
+                    {
+                        _regex.Add(s);
+                    }
+                    
+            }else {
+                _regex.Add(item: toAdd);
             }
-            
-            _regex.Add(item: toAdd);
         }
     }
 }
