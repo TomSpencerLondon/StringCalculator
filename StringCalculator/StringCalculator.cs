@@ -10,28 +10,40 @@ namespace StringCalculator
 {
     public class StringCalculator
     {
-        public int Add(string numbers)
-        {
-            List<String> regex = new List<string>(new string[]{",", "\\n"});
-            StringBuilder result = new StringBuilder();
+        private List<string> _regex = new List<string>(new string[]{",", "\\n"});
 
-            if (numbers.StartsWith("//"))
+
+        public int Add(string input)
+        {
+            
+            StringBuilder result = new StringBuilder();
+            
+            if (input.StartsWith("//"))
             {
-                string toAdd = ";";
-                regex.Add(toAdd);
-                result.Append(numbers.Substring(5, 3));
+                ExtractNumbersFrom(input, result);
             }else{
-                result.Append(numbers);
+                result.Append(input);
             }
 
             return result.ToString()
-                .Split(regex.ToArray(), StringSplitOptions.None)
+                .Split(_regex.ToArray(), StringSplitOptions.None)
                 .Select(x => x.Trim())
                 .Select(c => c.ToString())
                 .ToArray()
                 .Where(x => x.Length > 0)
                 .Select(int.Parse)
                 .Sum();
+        }
+
+        private void ExtractNumbersFrom(string numbers, StringBuilder result)
+        {
+            int startNumbers = numbers.IndexOf(@"\n", StringComparison.Ordinal) + 2;
+            var startCustomDelimiter = numbers.IndexOf("//") + 2;
+            int length = numbers.Length - (startNumbers + startCustomDelimiter);
+            string toAdd = numbers.Substring(startCustomDelimiter, length);
+            _regex.Add(toAdd);
+            var numbersLength = numbers.Length - startNumbers;
+            result.Append(numbers.Substring(startNumbers, numbersLength));
         }
     }
 }
