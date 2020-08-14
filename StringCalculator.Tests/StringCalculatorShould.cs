@@ -28,5 +28,13 @@ namespace StringCalculator.Tests
             var result = _stringCalculator.Add(numbers);
             Assert.That(result, Is.EqualTo(output));
         }
+
+        [Test]
+        public void AddWithCustomDelimiter()
+        {
+            var result = _stringCalculator.Add(@"//;\n1;2");
+
+            Assert.That(result, Is.EqualTo(3));
+        }
     }
 }
