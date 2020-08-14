@@ -21,6 +21,7 @@ namespace StringCalculator.Tests
 
         [TestCase("1,1", 2)]
         [TestCase("2,2", 4)]
+        [TestCase("2, 2, 2", 6)]
         public void AddSingleNumbers(string numbers, int output)
         {
             var result = _stringCalculator.Add(numbers);
