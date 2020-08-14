@@ -35,15 +35,32 @@ namespace StringCalculator
                 .Sum();
         }
 
-        private void ExtractNumbersFrom(string numbers, StringBuilder result)
+        private void ExtractNumbersFrom(string input, StringBuilder result)
         {
-            int startNumbers = numbers.IndexOf(@"\n", StringComparison.Ordinal) + 2;
-            var startCustomDelimiter = numbers.IndexOf("//") + 2;
-            int length = numbers.Length - (startNumbers + startCustomDelimiter);
-            string toAdd = numbers.Substring(startCustomDelimiter, length);
-            _regex.Add(toAdd);
-            var numbersLength = numbers.Length - startNumbers;
-            result.Append(numbers.Substring(startNumbers, numbersLength));
+            int startNumbers = input.IndexOf(@"\n", StringComparison.Ordinal) + 2;
+            var startCustomDelimiter = input.IndexOf("//", StringComparison.Ordinal) + 2;
+            int length = input.Length - (startNumbers + startCustomDelimiter);
+            
+            AddToRegex(input, startCustomDelimiter, length);
+            
+            AppendToResult(input, result, startNumbers);
+        }
+
+        private static void AppendToResult(string input, StringBuilder result, int startNumbers)
+        {
+            var numbersLength = input.Length - startNumbers;
+            result.Append(input.Substring(startNumbers, numbersLength));
+        }
+
+        private void AddToRegex(string input, int startCustomDelimiter, int length)
+        {
+            string toAdd = input.Substring(startCustomDelimiter, length);
+            if (toAdd.StartsWith("["))
+            {
+                toAdd = toAdd.Split('[', ']')[1];
+            }
+            
+            _regex.Add(item: toAdd);
         }
     }
 }

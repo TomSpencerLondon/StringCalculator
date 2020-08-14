@@ -14,7 +14,22 @@
     &lt;TestId&gt;NUnit3x::63217E35-0D73-4B2D-9193-969A6A565166::.NETFramework,Version=v4.8::StringCalculator.Tests.StringCalculatorShould.AddWithCustomDelimiter&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5b66d403_002Ddf31_002D4e7a_002Da0a5_002D9beaa33af7d8/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="False" ContinuousTestingMode="0" FrameworkVersion="{x:Null}" IsLocked="False" Name="AddWithCustomDelimiter #7" PlatformMonoPreference="{x:Null}" PlatformType="{x:Null}" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::63217E35-0D73-4B2D-9193-969A6A565166::.NETFramework,Version=v4.8::StringCalculator.Tests.StringCalculatorShould.AddWithCustomDelimiter&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7a2d5fe7_002Dcb6f_002D4e93_002Dad7f_002D9ebec18dbd50/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="False" ContinuousTestingMode="0" FrameworkVersion="{x:Null}" IsLocked="False" Name="AddWithCustomDelimiter #2" PlatformMonoPreference="{x:Null}" PlatformType="{x:Null}" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::63217E35-0D73-4B2D-9193-969A6A565166::.NETFramework,Version=v4.8::StringCalculator.Tests.StringCalculatorShould.AddWithCustomDelimiter&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8e2f4484_002D30c3_002D42ac_002D8803_002D3f93d494e649/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="False" ContinuousTestingMode="0" FrameworkVersion="{x:Null}" IsLocked="False" Name="AddWithCustomDelimiter #6" PlatformMonoPreference="{x:Null}" PlatformType="{x:Null}" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::63217E35-0D73-4B2D-9193-969A6A565166::.NETFramework,Version=v4.8::StringCalculator.Tests.StringCalculatorShould.AddWithCustomDelimiter&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a298802f_002Da3f2_002D40b7_002D8381_002D61854a217dd7/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="False" ContinuousTestingMode="0" FrameworkVersion="{x:Null}" IsLocked="False" Name="AddWithCustomDelimiter #5" PlatformMonoPreference="{x:Null}" PlatformType="{x:Null}" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::63217E35-0D73-4B2D-9193-969A6A565166::.NETFramework,Version=v4.8::StringCalculator.Tests.StringCalculatorShould.AddWithCustomDelimiter&lt;/TestId&gt;
   &lt;/TestAncestor&gt;

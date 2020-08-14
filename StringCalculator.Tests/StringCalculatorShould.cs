@@ -23,18 +23,19 @@ namespace StringCalculator.Tests
         [TestCase("2,2", 4)]
         [TestCase("2, 2, 2", 6)]
         [TestCase(@"1\n2,3", 6)]
-        public void AddSingleNumbers(string numbers, int output)
+        public void AddSingleNumbers(string numbers, int expected)
         {
-            var result = _stringCalculator.Add(numbers);
-            Assert.That(result, Is.EqualTo(output));
+            var output = _stringCalculator.Add(numbers);
+            Assert.That(expected, Is.EqualTo(output));
         }
         
-        [Test]
-        public void AddWithCustomDelimiter()
+        [TestCase(@"//;\n1;2", 3)]
+        [TestCase(@"//[***]\n1***2***3", 6)]
+        public void AddWithCustomDelimiter(string input, int expected)
         {
-            var result = _stringCalculator.Add(@"//;\n1;2");
+            var output = _stringCalculator.Add(input);
         
-            Assert.That(result, Is.EqualTo(3));
+            Assert.That(expected, Is.EqualTo(output));
         }
     }
 }
