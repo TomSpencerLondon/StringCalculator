@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace StringCalculator.Tests
@@ -37,6 +38,19 @@ namespace StringCalculator.Tests
             var output = _stringCalculator.Add(input);
         
             Assert.That(expected, Is.EqualTo(output));
+        }
+
+        [Test]
+        public void AddMethodShouldThrowIfAnyNumberIsNegative()
+        {
+            Assert.Throws<Exception>(() => _stringCalculator.Add("1,-1"), message: "negatives not allowed");
+        }
+
+        [Test]
+        public void AddMethodShouldIgnoreValuesGreaterThanOneThousand()
+        {
+            var result = _stringCalculator.Add("2,1001");
+            Assert.That(result, Is.EqualTo(2));
         }
     }
 }

@@ -31,7 +31,19 @@ namespace StringCalculator
                 .ToArray()
                 .Where(x => x.Length > 0)
                 .Select(int.Parse)
-                .Sum();
+                .Select(number =>
+                {
+                    if (number < 0)
+                    {
+                        throw new Exception("negatives not allowed");
+                    }
+                    if(number > 1000)
+                    {
+                        return 0;
+                    }
+
+                    return number;
+                }).Sum();
         }
 
         private void ExtractNumbersFrom(string input, StringBuilder result)
