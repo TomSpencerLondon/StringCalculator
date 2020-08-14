@@ -18,5 +18,13 @@ namespace StringCalculator.Tests
             var result = _stringCalculator.Add("");
             Assert.That(result, Is.EqualTo(0));
         }
+
+        [TestCase("1,1", 2)]
+        [TestCase("2,2", 4)]
+        public void AddSingleNumbers(string numbers, int output)
+        {
+            var result = _stringCalculator.Add(numbers);
+            Assert.That(result, Is.EqualTo(output));
+        }
     }
 }

@@ -1,3 +1,7 @@
+using System;
+using System.ComponentModel.Design;
+using System.Linq;
+using System.Text;
 using NUnit.Framework.Constraints;
 
 namespace StringCalculator
@@ -6,14 +10,17 @@ namespace StringCalculator
     {
         public int Add(string numbers)
         {
-            var result = 1;
-            
-            if (string.IsNullOrEmpty(numbers))
-            {
-                return 0;
-            }
+            StringBuilder result = new StringBuilder();
 
-            return result;
+            result.Append(numbers);
+
+            return result.ToString()
+                .Split(',')
+                .Select(c => c.ToString())
+                .ToArray()
+                .Where(x => x.Length > 0)
+                .Select(int.Parse)
+                .Sum();
         }
     }
 }
