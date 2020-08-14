@@ -19,9 +19,10 @@ namespace StringCalculator.Tests
             Assert.That(result, Is.EqualTo(0));
         }
 
-        [TestCase("1,1", 2)]
-        [TestCase("2,2", 4)]
-        [TestCase("2, 2, 2", 6)]
+        // [TestCase("1,1", 2)]
+        // [TestCase("2,2", 4)]
+        // [TestCase("2, 2, 2", 6)]
+        [TestCase(@"1\n2,3", 6)]
         public void AddSingleNumbers(string numbers, int output)
         {
             var result = _stringCalculator.Add(numbers);

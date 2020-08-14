@@ -15,7 +15,8 @@ namespace StringCalculator
             result.Append(numbers);
 
             return result.ToString()
-                .Split(',')
+                .Split(new string[]{",", "\\n"}, StringSplitOptions.None)
+                .Select(x => x.Trim())
                 .Select(c => c.ToString())
                 .ToArray()
                 .Where(x => x.Length > 0)
